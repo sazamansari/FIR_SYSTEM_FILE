@@ -20,7 +20,7 @@ function ResultsContainer() {
                     authors={book.volumeInfo.authors}
                     description={book.volumeInfo.description}
                 />
-            )) : <p>No books found</p>}
+            )) : <p>No FIR found</p>}
         </div>
     )
 }
