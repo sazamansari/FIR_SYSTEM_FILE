@@ -1,0 +1,29 @@
+{
+  "name": "develop",
+  "version": "1.0.0",
+  "description": "# My Portfolio",
+  "engine": {
+    "node": "14.x"
+  },
+  "main": "server.js",
+  "scripts": {
+    "build": "cd ./client && npm run build",
+    "install-client": "cd ./client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "dev": "concurrently \"nodemon server.js\" \"cd ./client && npm run start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
